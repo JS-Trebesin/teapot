@@ -1,19 +1,14 @@
 from flask import Flask, render_template
-import time
 import ascii_arts as asciis
 
 
 app = Flask(__name__)
-
-# following line is just for dev purposes
-app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 coffee_done = False
 
 
 @app.route("/")
 def index():
-    # return render_template("test.html"), 418
     return render_template("teapot.html"), 418
 
 
