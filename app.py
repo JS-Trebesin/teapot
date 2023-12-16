@@ -14,20 +14,6 @@ def index():
 
 @app.route("/teapot", methods=["GET"])
 def teapot():
-    return teapot_default()
-
-
-@app.route("/teapot", methods=["BREW", "POST"])
-def brew():
-    return brew()
-
-
-@app.route("/teapot", methods=["WHEN"])
-def when():
-    return when()
-
-
-def teapot_default():
     global coffee_done
     if not coffee_done:
         return asciis.send_chilling(), 418
@@ -36,11 +22,13 @@ def teapot_default():
         return asciis.send_coffee(), 418
 
 
+@app.route("/teapot", methods=["BREW", "POST"])
 def brew():
+    global coffee_done
+    coffee_done = True
     return asciis.send_brewing(), 418
 
 
+@app.route("/teapot", methods=["WHEN"])
 def when():
-    global coffee_done
-    coffee_done = True
     return asciis.send_pouring(), 418
