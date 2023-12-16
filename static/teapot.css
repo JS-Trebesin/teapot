@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #fcfbf6;
+    box-sizing: border-box;
+    color: #460003;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.error-no {
+    margin-top: 100px;
+    font-size: 150px;
+}
+
+.error-text {
+    margin-top: 30px;
+    font-size: 55px;
+}
+
+.teapot-img {
+    height: 750px;
+    translate: -65px 0px;
+}
