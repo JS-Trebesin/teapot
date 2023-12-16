@@ -8,4 +8,4 @@ flask implementace serverové odpovědi 418 I'm a teapot
 
 `curl -X WHEN server/teapot` nalije kafe
 
-`curl -X WHEN server/teapot` pošle kafe
+`curl -X GET server/teapot` pošle kafe
