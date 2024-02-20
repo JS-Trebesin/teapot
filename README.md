@@ -21,5 +21,3 @@ Pošli kafe:
 ```
 curl -X GET server/teapot
 ```
-
-_Podle oficiální dokumentace vaří kafe, ne čaj :(_
